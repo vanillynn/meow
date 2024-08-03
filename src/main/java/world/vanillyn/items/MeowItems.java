@@ -1,5 +1,6 @@
 package world.vanillyn.items;
 
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -30,12 +31,11 @@ public class MeowItems {
     public static final Item DRELIUM = register(new Drelium(new Item.Settings()), "drelium", ItemGroups.INGREDIENTS);
     public static final Item EMPTY_NEEDLE = register(new EmptyNeedle(new Item.Settings()), "empty_needle", ItemGroups.INGREDIENTS);
 
+
     // Tools and Material
     public static final Item MEOW_INGOT = register(new MeowIngot(new Item.Settings()), "meow_ingot", ItemGroups.INGREDIENTS);
-    public static final Item MEOW_SWORD = register(new SwordItem(MeowMaterial.INSTANCE, new Item.Settings()), "meow_sword", ItemGroups.COMBAT);
-    public static final Item MEOW_PICKAXE = register(new PickaxeItem(MeowMaterial.INSTANCE, new Item.Settings()), "meow_pickaxe", ItemGroups.TOOLS);
-    public static final Item MEOW_SHOVEL = register(new ShovelItem(MeowMaterial.INSTANCE, new Item.Settings()), "meow_shovel", ItemGroups.TOOLS);
-    public static final Item MEOW_AXE = register(new AxeItem(MeowMaterial.INSTANCE, new Item.Settings()), "meow_axe", ItemGroups.TOOLS);
+    public static final Item MEOW_SWORD = register(new SwordItem(MeowMaterial.MEOW_MATERIAL, new Item.Settings()), "meow_sword", ItemGroups.COMBAT);
+    public static final Item MEOW_PICKAXE = register(new PickaxeItem(MeowMaterial.MEOW_MATERIAL, new Item.Settings()), "meow_pickaxe", ItemGroups.TOOLS);
 
 
 
