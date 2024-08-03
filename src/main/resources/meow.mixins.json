@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "world.vanillyn.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

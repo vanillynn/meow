@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "meow",
+	"version": "${version}",
+	"name": "Epinephrine",
+	"description": "Get 20 FREE Needles with promo code 'mpdqzmxuzq'!",
+	"authors": [
+		"Adrenaland"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/meow/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"world.vanillyn.Meow"
+		],
+		"client": [
+			"world.vanillyn.MeowClient"
+		]
+	},
+	"mixins": [
+		"meow.mixins.json",
+		{
+			"config": "meow.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
