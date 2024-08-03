@@ -1,5 +1,7 @@
 {
   "item.meow.meow_substance": "Meow Substance",
   "item.meow.needle": "Epinephrine",
-  "item_group.Meow": "Meow!"
+  "item_group.Meow": "Meow!",
+  "block.meow.meow_ore": "Meow Ore",
+  "block.meow.deepslate_meow_ore": "Deepslate Meow Ore"
 }

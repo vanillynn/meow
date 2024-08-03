@@ -45,7 +45,7 @@ public enum MeowMaterial implements ToolMaterial {
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return BlockTags.INCORRECT_FOR_IRON_TOOL;
+        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
     }
 
 
