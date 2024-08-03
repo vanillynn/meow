@@ -1,4 +1,5 @@
 {
   "item.meow.meow_substance": "Meow Substance",
-  "item.meow.needle": "Epinephrine"
+  "item.meow.needle": "Epinephrine",
+  "item_group.Meow": "Meow!"
 }

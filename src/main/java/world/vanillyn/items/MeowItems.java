@@ -8,17 +8,16 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import world.vanillyn.Meow;
 
 
 import static world.vanillyn.Meow.MOD_ID;
 import static world.vanillyn.Meow.LOGGER;
 
 public class MeowItems {
-    public static final RegistryKey<ItemGroup> MEOW_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(Meow.MOD_ID, "item_group"));
+    public static final RegistryKey<ItemGroup> MEOW_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(MOD_ID, "item_group"));
     public static final ItemGroup MEOW_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(MeowItems.MEOW_SWORD))
-            .displayName(Text.translatable("itemGroup.meow"))
+            .displayName(Text.translatable("item_group.meow"))
             .build();
     public static <T extends Item> T register(T item, String id){
         // Create the identifier for the item.
