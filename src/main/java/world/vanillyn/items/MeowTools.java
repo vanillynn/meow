@@ -1,7 +1,6 @@
 package world.vanillyn.items;
 
 import net.minecraft.block.Block;
-import net.minecraft.component.type.ToolComponent;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
@@ -9,7 +8,7 @@ import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
-public enum MeowMaterial implements ToolMaterial {
+public enum MeowTools implements ToolMaterial {
     MEOW_MATERIAL(5, 650, 4.5f, 3.5f, 26,
             () -> Ingredient.ofItems(MeowItems.MEOW_INGOT));
     private final int miningLevel;
@@ -19,11 +18,11 @@ public enum MeowMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    MeowMaterial(int miningLevel, int itemDurability, float miningSpeed, float attckDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    MeowTools(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
-        this.attackDamage = attckDamage;
+        this.attackDamage = attackDamage;
         this.enchantability = enchantability;
         this.repairIngredient = repairIngredient;
     }
@@ -45,9 +44,8 @@ public enum MeowMaterial implements ToolMaterial {
 
     @Override
     public TagKey<Block> getInverseTag() {
-        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+        return BlockTags.NEEDS_DIAMOND_TOOL;
     }
-
 
     @Override
     public int getEnchantability() {

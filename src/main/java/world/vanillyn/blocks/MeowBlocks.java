@@ -31,6 +31,7 @@ public class MeowBlocks {
             "meow_ore",
             true
     );
+
     public static final Block DEEPSLATE_MEOW_ORE = register(
             new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE)),
             "deepslate_meow_ore",
