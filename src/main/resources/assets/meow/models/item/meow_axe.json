@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "meow:items/meow_axe"
+        "layer0": "meow:item/meow_axe"
     }
 }

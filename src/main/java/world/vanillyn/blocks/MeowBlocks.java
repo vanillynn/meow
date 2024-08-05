@@ -14,11 +14,8 @@ import static world.vanillyn.Meow.MOD_ID;
 
 public class MeowBlocks {
     public static Block register(Block block, String name, boolean shouldRegisterItem) {
-        // Register the block and its item.
         Identifier id = Identifier.of(MOD_ID, name);
 
-        // Sometimes, you may not want to register an item for the block.
-        // Eg: if it's a technical block like `minecraft:air` or `minecraft:end_gateway`
         if (shouldRegisterItem) {
             BlockItem blockItem = new BlockItem(block, new Item.Settings());
             Registry.register(Registries.ITEM, id, blockItem);
@@ -36,7 +33,7 @@ public class MeowBlocks {
     );
     public static final Block DEEPSLATE_MEOW_ORE = register(
             new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE)),
-            "deepslae_meow_ore",
+            "deepslate_meow_ore",
             true
     );
 }
