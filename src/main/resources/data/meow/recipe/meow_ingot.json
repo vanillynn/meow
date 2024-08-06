@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "meow:meow_substance"
+    }
+  },
+  "result": {
+    "id": "meow:meow_ingot",
+    "count": 1
+  }
+}

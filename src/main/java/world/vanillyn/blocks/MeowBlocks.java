@@ -27,14 +27,19 @@ public class MeowBlocks {
         LOGGER.info("Blocks initialized!");
     }
     public static final Block MEOW_ORE = register(
-            new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE)),
+            new Block(AbstractBlock.Settings.create().hardness(7).sounds(BlockSoundGroup.STONE)),
             "meow_ore",
             true
     );
 
     public static final Block DEEPSLATE_MEOW_ORE = register(
-            new Block(AbstractBlock.Settings.create().sounds(BlockSoundGroup.DEEPSLATE)),
+            new Block(AbstractBlock.Settings.create().hardness(9).sounds(BlockSoundGroup.DEEPSLATE)),
             "deepslate_meow_ore",
+            true
+    );
+    public static final Block PSYCH_ORB = register(
+            new Block(AbstractBlock.Settings.create().hardness(100)),
+            "psych_orb",
             true
     );
 }

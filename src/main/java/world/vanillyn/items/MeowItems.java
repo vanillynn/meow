@@ -38,7 +38,7 @@ public class MeowItems {
     public static final Item MEOW_PICKAXE = register(new PickaxeItem(MeowTools.MEOW_MATERIAL, new Item.Settings()), "meow_pickaxe", ItemGroups.TOOLS);
     public static final Item MEOW_AXE = register(new AxeItem(MeowTools.MEOW_MATERIAL, new Item.Settings()), "meow_axe", ItemGroups.TOOLS);
     public static final Item MEOW_SHOVEL = register(new ShovelItem(MeowTools.MEOW_MATERIAL, new Item.Settings()), "meow_shovel", ItemGroups.TOOLS);
-
+    public static final Item RADIO = register(new Radio (new Item.Settings()), "radio", ItemGroups.TOOLS);
 
 
 }
