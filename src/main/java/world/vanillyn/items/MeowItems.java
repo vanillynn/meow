@@ -7,6 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
+import world.vanillyn.Meow;
 
 import static world.vanillyn.Meow.MOD_ID;
 import static world.vanillyn.Meow.LOGGER;
@@ -19,7 +20,7 @@ public class MeowItems {
 
         ItemGroupEvents.modifyEntriesEvent(group).register(itemGroup -> itemGroup.add(item));
 
-        return Registry.register(Registries.ITEM, itemID, item);
+        return Registry.register(Registries.ITEM, Meow.id(id), item);
     }
     public static void initialize() {
         LOGGER.info("Items initialized!");

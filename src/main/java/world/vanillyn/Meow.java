@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import world.vanillyn.blocks.MeowBlocks;
 import world.vanillyn.items.MeowItems;
+import net.minecraft.util.Identifier;
 
 public class Meow implements ModInitializer {
 	public static final String MOD_ID = "meow";
@@ -18,5 +19,8 @@ public class Meow implements ModInitializer {
 		MeowBlocks.initialize();
 		LOGGER.info("Hello Fabric world!");
 
+	}
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
 	}
 }

@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "meow",
 	"version": "${version}",
-	"name": "Epinephrine",
-	"description": "Get 20 FREE Needles with promo code 'mpdqzmxuzq'!",
+	"name": "MeowMod2000",
+	"description": "Get 20 FREE Needles with promo code 'meow'!",
 	"authors": [
-		"Adrenaland"
+		"Vanillyn"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/vanilynn/meow"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/meow/icon.png",

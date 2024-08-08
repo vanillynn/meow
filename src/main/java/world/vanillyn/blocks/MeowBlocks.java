@@ -7,21 +7,19 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
+import world.vanillyn.Meow;
 
 import static world.vanillyn.Meow.LOGGER;
-import static world.vanillyn.Meow.MOD_ID;
 
 public class MeowBlocks {
-    public static Block register(Block block, String name, boolean shouldRegisterItem) {
-        Identifier id = Identifier.of(MOD_ID, name);
+    public static Block register(Block block, String name, boolean regItem) {
 
-        if (shouldRegisterItem) {
+        if (regItem) {
             BlockItem blockItem = new BlockItem(block, new Item.Settings());
-            Registry.register(Registries.ITEM, id, blockItem);
+            Registry.register(Registries.ITEM, Meow.id(name), blockItem);
         }
 
-        return Registry.register(Registries.BLOCK, id, block);
+        return Registry.register(Registries.BLOCK, Meow.id(name), block);
     }
     public static void initialize() {
         LOGGER.info("Blocks initialized!");
@@ -38,7 +36,7 @@ public class MeowBlocks {
             true
     );
     public static final Block PSYCH_ORB = register(
-            new Block(AbstractBlock.Settings.create().hardness(100)),
+            new PsychOrb(AbstractBlock.Settings.create().hardness(100)),
             "psych_orb",
             true
     );
