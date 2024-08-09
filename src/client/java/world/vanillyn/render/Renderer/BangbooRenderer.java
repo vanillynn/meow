@@ -3,19 +3,18 @@ package world.vanillyn.render.Renderer;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;
-import world.vanillyn.Meow;
 import world.vanillyn.MeowClient;
-import world.vanillyn.entity.Bangboo.Blankboo;
-import world.vanillyn.render.Model.Bangboo.BlankbooModel;
+import world.vanillyn.entity.Bangboo.Bangboo;
+import world.vanillyn.render.Model.Bangboo.BangbooModel;
 
-public class BangbooRenderer extends MobEntityRenderer<Blankboo, BlankbooModel> {
+public class BangbooRenderer extends MobEntityRenderer<Bangboo, BangbooModel> {
 
     public BangbooRenderer(EntityRendererFactory.Context context) {
-        super(context, new BlankbooModel(context.getPart(MeowClient.MODEL_BANGBOO_LAYER)), 1f);
+        super(context, new BangbooModel(context.getPart(MeowClient.MODEL_BANGBOO_LAYER)), 1f);
     }
 
     @Override
-    public Identifier getTexture(Blankboo entity) {
-        return Meow.id("textures/entity/bangboo/blankboo/blankboo.png");
+    public Identifier getTexture(Bangboo entity) {
+        return entity.getCustomTexture();
     }
 }

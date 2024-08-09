@@ -8,8 +8,8 @@ import world.vanillyn.Meow;
 import world.vanillyn.entity.MeowEntities;
 
 
-public class Eous extends Bangboo {
-    public Eous(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class Bagboo extends Bangboo {
+    public Bagboo(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -21,6 +21,6 @@ public class Eous extends Bangboo {
 
 
     public Identifier getCustomTexture() {
-        return Meow.id("textures/entity/bangboo/eous/eous.png");
+        return Meow.id("textures/entity/bangboo/bagboo/bagboo.png");
     }
 }

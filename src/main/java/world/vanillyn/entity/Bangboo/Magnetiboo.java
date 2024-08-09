@@ -5,11 +5,10 @@ import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import world.vanillyn.Meow;
-import world.vanillyn.entity.MeowEntities;
 
 
-public class Eous extends Bangboo {
-    public Eous(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class Magnetiboo extends Bangboo {
+    public Magnetiboo(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
 
@@ -21,6 +20,6 @@ public class Eous extends Bangboo {
 
 
     public Identifier getCustomTexture() {
-        return Meow.id("textures/entity/bangboo/eous/eous.png");
+        return Meow.id("textures/entity/bangboo/magnetiboo/magnetiboo.png");
     }
 }

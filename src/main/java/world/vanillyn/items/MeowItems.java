@@ -6,10 +6,10 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
-import net.minecraft.util.Identifier;
 import world.vanillyn.Meow;
 
 import static world.vanillyn.Meow.LOGGER;
+import static world.vanillyn.entity.MeowEntities.*;
 
 public class MeowItems {
 
@@ -43,5 +43,8 @@ public class MeowItems {
     // Rapid Eyes
     public static final Item RADIO = register(new Radio (new Item.Settings()), "radio", ItemGroups.TOOLS);
 
-
+    // Bangboo
+    public static final Item BANGBOO_CORE_EOUS = register(new BangbooCore(new Item.Settings(), BANGBOO_EOUS),"bangboo_core_eous", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_SHARKBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_SHARKBOO),"bangboo_core_sharkboo", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_BAGBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_BAGBOO),"bangboo_core_bagboo", ItemGroups.INGREDIENTS);
 }

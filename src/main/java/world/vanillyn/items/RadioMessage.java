@@ -2,7 +2,7 @@ package world.vanillyn.items;
 
 
 public class RadioMessage {
-    static final String[] radio_message = {
+    public static final String[] radio_message = {
             "Hello! I'm Radio! Welcome to my radio show!",
             "What's your favorite color?",
             "When I was younger I was told my voice could lift anyone!",

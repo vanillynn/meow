@@ -1,5 +1,6 @@
 package world.vanillyn.items;
 
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemUsageContext;
@@ -11,21 +12,21 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 
-import static world.vanillyn.entity.MeowEntities.RADIO_BOX;
+public class BangbooCore extends Item {
+    private final EntityType<?> entityType;
 
-
-
-public class Radio extends Item {
-    public Radio(Settings settings){
+    public BangbooCore(Settings settings, EntityType<?> entityType) {
         super(settings);
+        this.entityType = entityType;
     }
+
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        World world =  context.getWorld();
+        World world = context.getWorld();
         if (!world.isClient) {
             BlockPos pos = context.getBlockPos().offset(context.getSide());
 
-            RADIO_BOX.spawnFromItemStack((ServerWorld) world, context.getStack(), context.getPlayer(), pos, SpawnReason.SPAWN_EGG, true, true);
+            entityType.spawnFromItemStack((ServerWorld) world, context.getStack(), context.getPlayer(), pos, SpawnReason.SPAWN_EGG, true, true);
             world.playSound(null, pos, SoundEvents.ENTITY_ITEM_PICKUP, SoundCategory.BLOCKS, 1.0F, 1.0F);
             context.getStack().decrement(1); // Decrease the item stack by one
             return ActionResult.SUCCESS;
