@@ -11,7 +11,9 @@ import world.vanillyn.Meow;
 import static world.vanillyn.Meow.LOGGER;
 import static world.vanillyn.entity.MeowEntities.*;
 
+
 public class MeowItems {
+
 
     public static <T extends Item> T register(T item, String id, RegistryKey<ItemGroup> group){
 
@@ -44,7 +46,14 @@ public class MeowItems {
     public static final Item RADIO = register(new Radio (new Item.Settings()), "radio", ItemGroups.TOOLS);
 
     // Bangboo
+    public static final Item BANGBOO_CORE = register(new BangbooCore(new Item.Settings(), BANGBOO_BLANKBOO),"bangboo_core", ItemGroups.INGREDIENTS);
     public static final Item BANGBOO_CORE_EOUS = register(new BangbooCore(new Item.Settings(), BANGBOO_EOUS),"bangboo_core_eous", ItemGroups.INGREDIENTS);
     public static final Item BANGBOO_CORE_SHARKBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_SHARKBOO),"bangboo_core_sharkboo", ItemGroups.INGREDIENTS);
     public static final Item BANGBOO_CORE_BAGBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_BAGBOO),"bangboo_core_bagboo", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_AMILLION = register(new BangbooCore(new Item.Settings(), BANGBOO_AMILLION),"bangboo_core_amillion", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_LUCKYBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_LUCKYBOO),"bangboo_core_luckyboo", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_EXPLOREBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_EXPLOREBOO),"bangboo_core_exploreboo", ItemGroups.INGREDIENTS);
+    public static final Item BANGBOO_CORE_MAGNETIBOO = register(new BangbooCore(new Item.Settings(), BANGBOO_MAGNETIBOO),"bangboo_core_magnetiboo", ItemGroups.INGREDIENTS);
+
+
 }
